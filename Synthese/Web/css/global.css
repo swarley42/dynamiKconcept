@@ -4,3 +4,65 @@
 * Fait Par : Etienne Belanger,Hugo Fontaine*
 * *
 *--------------------------------------------------- */
+
+
+* {
+	margin:auto;
+	padding:0px;
+}
+
+html {
+	background-color:#87CEFA;
+	background-color:white;
+	background-image:url('../images/page-content.jpg');
+	
+}
+
+h1{
+	font-family:Comic Sans MS;
+	color:#1D8C00;
+	text-align:left;
+	font-size:40px;
+	margin:0;
+	width:1029px;
+	
+
+
+}
+span{
+box-shadow: 0px 23px 45px #000;
+}
+.page-container{
+	background-image:url('../images/header.jpg');
+	min-height:306px;
+	width:1029px;
+	background-repeat:no-repeat;
+	padding:20px;
+	padding-top:0px;
+	margin:0px auto;
+	
+	
+}
+.menu-section {
+	float:left;
+	width:200px;
+	margin-top:35px;
+	margin-right:35px;
+	text-align:left;
+}
+a {
+	color:#A63600;
+	font-size:20px;
+	
+}
+.menu-section ul  li{
+	padding-top:10px;
+	list-style-type:none;
+}
+
+
+.page-content{
+	
+
+
+}
