@@ -29,6 +29,7 @@
 			{
 		?>
 			<a href="login.php">Login</a>
+			<a href="register.php">S'Enregistrer</a>
 	<?php
 			}
 			else
@@ -36,5 +37,12 @@
 		?>
 			<a href="?logout=true">Déconnexion</a>
 		<?php
+			if($action->isAdmin())
+			  {
+			?>
+				<a href="admin.php">Administrateur</a>
+			<?php
+			  }
 			}
-		<?
+		
+		

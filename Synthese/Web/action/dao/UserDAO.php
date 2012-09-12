@@ -37,10 +37,25 @@
 	
 	
 		public static function register($username, $pass) {
+			$result = null;
 			$conn = Connection::getConnection();
+			$queryId = "SELECT ID FROM USERS";
+			$statement = oci_parse($conn, $queryId);
+			oci_execute($statement);
+			if ($row = oci_fetch_array($statement)) {
+				$result = $row;
+			}
 			
-			$query = "INSERT INTO USERS ";
 			
+			$query = "INSERT INTO USERS VALUES (:pUsername, value2, value3,...)";
+			$statement = oci_parse($conn, $query);
+			
+			$password = sha1($password);
+			
+			
+			oci_bind_by_name($statement, ":pUsername", $username);
+			oci_bind_by_name($statement, ":pPassword", $password);
+			oci_execute($statement);
 		}
 	
 	}

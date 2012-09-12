@@ -47,6 +47,10 @@
 			return $_SESSION["visibility"] > CommonAction::$VISIBILITY_PUBLIC;
 		}
 		
+		public function isAdmin() {
+			return $_SESSION["visibility"] = CommonAction::$VISIBILITY_ADMINISTRATOR;
+		}
+		
 		public function getName() {
 			$name = "Invité";
 			
