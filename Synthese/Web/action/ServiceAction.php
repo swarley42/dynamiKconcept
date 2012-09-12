@@ -9,6 +9,7 @@
 <?php
 
 	require_once("action/CommonAction.php");
+	require_once("action/dao/ServiceDAO.php");
 
 	class ServiceAction extends CommonAction {
 		
@@ -18,6 +19,8 @@
 		}
 		
 		public function executeAction() {
-					
+				$data=null;
+				$data=ServiceDAO::lireService();
+				$this->data = $data;	
 		}
 	}

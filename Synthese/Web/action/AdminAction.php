@@ -8,8 +8,16 @@
 ?>
 <?php
 	require_once("action/CommonAction.php");
+	require_once("action/dao/UserDAO.php");
+	require_once("action/dao/ServiceDAO.php");
 
 	class AdminAction extends CommonAction {
+		public $accueil;
+		public $career;
+		public $company;
+		public $contact;
+		public $gallery;
+		public $services;
 		
 	
 		public function __construct() {
@@ -17,6 +25,20 @@
 		}
 		
 		public function executeAction() {
+		
+			if(isset($_GET["accueil"]))
+			{
+			$this->accueil = true;
+			
+			}
+			if(isset($_GET["services"]))
+			{
+			$this->services = true;
+			}
+			if(isset($_GET["contact"]))
+			{
+			$this->contact = true;
+			}
 					
 		}
 	}
