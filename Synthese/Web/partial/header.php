@@ -18,7 +18,31 @@
 		    <div class="page-container">
 		    	<div class="site-header">
 		    		<div class="page-title-section">
-			    		<h1><span>DynamiKoncept</span></h1>			    		
+			    		<h1><span>DynamiKoncept</span><span class="bonjour">Bonjour, <?php echo $action->getName(); ?></span></h1>			    		
+		    		</div>
+							<div class="sous-menu"><ul>
+							<?php
+							if(!$action->isConnected())
+							{
+							?>
+							<li><a href="login.php">Login</a></li>
+							<li><a href="register.php">S'enregistrer</a></li>
+							<?php
+							}
+							else
+							{
+							?>
+								<li><a href="?logout=true">Déconnexion</a></li>
+							<?php
+								if($action->isAdmin())
+								{
+							?>
+								<li><a href="admin.php">Administrateur</a>>/li>
+							<?php
+								}
+							}
+							?>
+		    			</ul>
 		    		</div>
 		    		<div class="menu-section">
 		    			<ul>
@@ -27,31 +51,8 @@
 		    				<li><a href="career.php">Carrières</a></li>
 							<li><a href="gallery.php">Gallery</a></li>
 							<li><a href="company.php">Compagnie</a></li>
-							<li><a href="contact.php">Contact</a></li>
-							<li>Bonjour, <?php echo $action->getName(); ?></li>
-								<?php
-								if(!$action->isConnected())
-								{
-								?>
-								<li><a href="login.php">Login</a></li>
-								<li><a href="register.php">S'Enregistrer</a></li>
-								<?php
-								}
-								else
-								{
-								?>
-									<li><a href="?logout=true">Déconnexion</a></li>
-								<?php
-									if($action->isAdmin())
-									{
-								?>
-									<li><a href="admin.php">Administrateur</a>>/li>
-								<?php
-									}
-								}
-								?>
-		    			</ul>
-		    		</div>
+							<li><a href="contact.php">Contact</a></li></ul></div>
+
 		    		<div class="clear"></div>
 		    	</div>
 		    	<div class="page-content">

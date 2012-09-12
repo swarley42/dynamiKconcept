@@ -11,7 +11,7 @@
 	padding:0px;
 }
 
-html {
+html{
 	background-color:#87CEFA;
 	background-color:white;
 	background-image:url('../images/page-content.jpg');
@@ -24,20 +24,26 @@ h1{
 	text-align:left;
 	font-size:40px;
 	margin:0;
-	width:1029px;
-	
+	width:1000px;
+	}
 
-
-}
 span{
-box-shadow: 0px 23px 45px #000;
+text-shadow: 0.1em 0.1em 0.2em black
 }
+.bonjour{
+	font-size:20px;
+	text-align:right;
+	color:black;
+	padding-left:500px;
+
+}
+
 .page-container{
 	background-image:url('../images/header.jpg');
 	min-height:306px;
 	width:1029px;
 	background-repeat:no-repeat;
-	padding:20px;
+	
 	padding-top:0px;
 	margin:0px auto;
 	
@@ -50,19 +56,36 @@ box-shadow: 0px 23px 45px #000;
 	margin-right:35px;
 	text-align:left;
 }
+.sous-menu{
+	float:right;
+	text-align:right;
+	margin-right:10px;
+	
+}
 a {
 	color:#A63600;
 	font-size:20px;
 	
 }
-.menu-section ul  li{
+.sous-menu a{
+	margin:0;
+	color:#FFB800;
+	font-size:20px;
+}
+ul  li{
 	padding-top:10px;
 	list-style-type:none;
+	font-size:20px;
 }
 
 
 .page-content{
-	
-
+		margin-right:0px;
+		margin-top:249px;
+		width:1029px;
+		height:1029px;
+		background-image:url('../images/woodenContainer.jpg');
+		background-repeat:repeat;
+		
 
 }
