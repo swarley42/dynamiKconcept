@@ -12,7 +12,7 @@
 	require_once("action/dao/ServiceDAO.php");
 
 	class AdminAction extends CommonAction {
-		public $accueil;
+		public $home;
 		public $career;
 		public $company;
 		public $contact;
@@ -25,10 +25,16 @@
 		}
 		
 		public function executeAction() {
-		
-			if(isset($_GET["accueil"]))
+			
+			if($_SESSION["visibility"] < CommonAction::$VISIBILITY_ADMINISTRATOR)
 			{
-			$this->accueil = true;
+			header("location:index.php");
+			exit;
+			}
+			
+			if(isset($_GET["home"]))
+			{
+			$this->home = true;
 			
 			}
 			if(isset($_GET["services"]))

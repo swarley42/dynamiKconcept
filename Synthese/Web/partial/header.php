@@ -10,6 +10,7 @@
 		<head>
 		<meta http-equiv="imagetoolbar" content="no" />
         <link href="css/global.css" rel="stylesheet" type="text/css" media="screen" />
+		<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
 		<title>DynamiKoncept</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	    </head>
@@ -37,7 +38,7 @@
 								if($action->isAdmin())
 								{
 							?>
-								<li><a href="admin.php">Administrateur</a>>/li>
+								<li><a href="admin.php">Administrateur</a></li>
 							<?php
 								}
 							}
