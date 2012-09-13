@@ -14,7 +14,14 @@
 
 	require_once("partial/header.php");
 ?>
-
+<?php 
+	foreach($action->data as $value)
+	{
+	?>
+	
+	<?php
+	}
+	?>
 
 <?php
 	require_once("partial/footer.php");

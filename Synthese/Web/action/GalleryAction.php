@@ -9,6 +9,7 @@
 <?php
 
 	require_once("action/CommonAction.php");
+	require_once("action/dao/ImageDAO.php");
 
 	class GalleryAction extends CommonAction {
 		
@@ -18,6 +19,9 @@
 		}
 		
 		public function executeAction() {
+				$data=null;
+				$data=ImageDAO::lireImage();
+				$this->data = $data;
 					
 		}
 	}
