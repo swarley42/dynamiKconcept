@@ -23,14 +23,7 @@
 	<?php
 	}
 	?>
-	<?php
-	if($action->isAdmin())
-	{
-	?>
-	
-	<?php
-	}
-	?>
+
 
 
 

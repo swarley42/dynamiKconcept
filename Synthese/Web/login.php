@@ -18,14 +18,14 @@
 
 		<form action="login.php" method="post">
 			
-			<div>
+			<div class="login">
 				<label for="username">
 					Nom d'usager : 
 				</label>
 				<input type="text" name="username" id="username" />
 			</div>
 
-			<div>
+			<div class="login">
 				<label for="password">
 					Mot de passe : 
 				</label>
