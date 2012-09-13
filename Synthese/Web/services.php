@@ -15,6 +15,23 @@
 
 	require_once("partial/header.php");
 ?>
+	<?php 
+	foreach($action->data as $value)
+	{
+	?>
+	<h1><?php echo $value["NOM"]; ?></h1> <p><?php echo $value["DESCRIPTION"];?></p>
+	<?php
+	}
+	?>
+	<?php
+	if($action->isAdmin())
+	{
+	?>
+	
+	<?php
+	}
+	?>
+
 
 
 <?php
