@@ -26,6 +26,28 @@
 	<?php 
 	}
 	?>
+	<?php 
+	if(isset($action->gallery))
+	{
+	?>
+	<form action="?choix=true" method = "get">
+	<Input type = "radio" Name = "rImage" Value = "ajouter">Ajouter
+	<Input type = "radio" Name = "rImage" Value = "modifier">Modifier
+	<Input type = "radio" Name = "rImage" Value = "suprimer">Suprimer
+	<input type= "button" Name ="boutonImage" value="ChoixImage" />
+	</form>
+	
+		<?php 
+		if(isset($action->ajout))
+		{
+		?>
+		
+		<?php 
+		}
+		?>
+	<?php 
+	}
+	?>
 <?php
 	require_once("partial/footer.php");
 ?>

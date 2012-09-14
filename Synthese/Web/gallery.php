@@ -13,16 +13,13 @@
 	$action->execute();
 
 	require_once("partial/header.php");
-?>
-<?php 
+
 	foreach($action->data as $value)
 	{
-	?>
-	
-	<?php
+	echo '<img src="'.$value['PATH'].'" />';
 	}
-	?>
 
-<?php
+
+	
 	require_once("partial/footer.php");
 ?>
