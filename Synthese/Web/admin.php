@@ -36,18 +36,39 @@
 	<Input type = "radio" Name = "rImage" Value = "suprimer">Suprimer
 	<input type= "button" Name ="boutonImage" value="ChoixImage" />
 	</form>
-	
-		<?php 
-		if(isset($action->ajout))
-		{
-		?>
-		
-		<?php 
-		}
-		?>
 	<?php 
 	}
 	?>
+		<?php 
+		if(isset($action->ajout || $action->suprimer || $action->modifier))
+		{
+			if(isset($action->ajout))
+			{
+			?>
+			
+			<?php 
+			}
+			?>
+			<?php 
+			if(isset($action->suprimer))
+			{
+			?>
+			
+			<?php 
+			}
+			?>
+			<?php 
+			if(isset($action->modifier))
+			{
+			?>
+			
+			<?php 
+			}
+			?>
+		<?php 
+		}
+		?>
+	
 <?php
 	require_once("partial/footer.php");
 ?>

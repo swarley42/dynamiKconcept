@@ -8,7 +8,8 @@
 ?>
 <?php
 	require_once("action/CommonAction.php");
-
+	require_once("action/dao/ContentDAO.php");
+	
 	class IndexAction extends CommonAction {
 		
 	
@@ -17,6 +18,10 @@
 		}
 		
 		public function executeAction() {
+					$data = null;
+					
+					$data = ContentDAO::lirePage();
+					$this->data = $data;
 					
 		}
 	}
