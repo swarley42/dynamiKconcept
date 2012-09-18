@@ -14,14 +14,16 @@
 
 	require_once("partial/header.php");
 	echo $action->text["CONTENT"];
-	
+	?>
+	<?php 
 	foreach($action->data as $value)
 	{
-	echo $value["TITRE"];
-	echo $value["DESCRIPTION"];
-	
+	?>
+	<h1><?php echo $value["TITRE"]; ?></h1> <p><?php echo $value["DESCRIPTION"];?></p>
+	<?php
 	}
-?>
+	?>
+
 
 
 <?php

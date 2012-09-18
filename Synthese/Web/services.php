@@ -19,7 +19,7 @@
 	foreach($action->data as $value)
 	{
 	?>
-	<h1><?php echo $value["NOM"]; ?></h1> <p><?php echo $value["DESCRIPTION"];?></p>
+	<h1><?php echo $value["NAME"]; ?></h1> <p><?php echo $value["DESCRIPTION"];?></p>
 	<?php
 	}
 	?>

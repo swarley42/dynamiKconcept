@@ -9,6 +9,7 @@
 <?php
 
 	require_once("action/CommonAction.php");
+	require_once("action/dao/ContentDAO.php");
 
 	class CompanyAction extends CommonAction {
 		
@@ -19,5 +20,9 @@
 		
 		public function executeAction() {
 					
+					$data = null;
+					
+					$data = ContentDAO::lirePage("company");
+					$this->data = $data;
 		}
 	}

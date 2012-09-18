@@ -83,9 +83,15 @@ ul  li{
 		margin-right:0px;
 		margin-top:249px;
 		width:1029px;
-		height:1029px;
+		min-height:1029px;
+		font-weight:bold;
 		background-image:url('../images/woodenContainer.jpg');
 		background-repeat:repeat;
+		font-family:Courier New;
+		font-size:24px;
+		color:black;
+		padding-top:20px;
+
 		
 
 }
@@ -100,4 +106,9 @@ label{
 input{
 	margin-top:10px;
 	margin-left:10px;
+}
+
+img{
+	padding-left:275px;
+	padding-top:15px;
 }
