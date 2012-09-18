@@ -8,6 +8,7 @@
 ?>
 <?php
 	require_once("action/CommonAction.php");
+	require_once("action/dao/ContentDAO.php");
 
 	class CareerAction extends CommonAction {
 		
@@ -17,6 +18,9 @@
 		}
 		
 		public function executeAction() {
+					$data = null;
 					
+					$data = ContentDAO::lirePage("carreer");
+					$this->data = $data;
 		}
 	}

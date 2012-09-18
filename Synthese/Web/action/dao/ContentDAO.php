@@ -19,7 +19,7 @@
 			oci_execute($statement);
 			
 			while ($row = oci_fetch_array($statement)) {
-				$result[] = $row;
+				$result = $row;
 			}
 			
 		 return $result;

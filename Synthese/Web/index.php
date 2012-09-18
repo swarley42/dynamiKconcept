@@ -14,7 +14,7 @@
 	$action->execute();
 
 	require_once("partial/header.php");
-	echo $data["CONTENT"];
+	echo $action->data["CONTENT"];
 ?>
 
 

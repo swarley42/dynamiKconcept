@@ -20,7 +20,7 @@
 		public function executeAction() {
 					$data = null;
 					
-					$data = ContentDAO::lirePage();
+					$data = ContentDAO::lirePage("index");
 					$this->data = $data;
 					
 		}
