@@ -41,6 +41,14 @@
 								<li><a href="admin.php">Administrateur</a></li>
 							<?php
 								}
+								if($action->getCurrentPage()=="http://localhost/admin.php")
+								{
+							?>
+									<li><a href="?home=true"> Accueil </a></li>
+									<li><a href="?gallery=true"> Gallerie </a></li>
+									<li><a href="?services=true"> Services </a></li>
+							<?php
+								}
 							}
 							?>
 		    			</ul>

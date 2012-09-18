@@ -14,10 +14,7 @@
 
 	require_once("partial/header.php");
 ?>
-	<a href="?home=true"> Accueil </a>
-	<a href="?gallery=true"> Gallerie </a>
-	<a href="?services=true"> Services </a>
-	
+
 	<?php 
 	if(isset($action->home))
 	{
