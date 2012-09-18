@@ -24,16 +24,6 @@
 	}
 	?>
 	<?php
-	if(isset($action->gallery))
-	{
-	?>
-	<a href="?ajoutImage=true"> Ajouter </a>
-	<a href="?suprimerImage=true"> Delete </a>
-	<a href="?modifierImage=true"> Modifier </a>
-	<?php 
-	}
-	?>
-	<?php
 	if(isset($action->ajoutImage))
 	{
 	?>

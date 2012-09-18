@@ -4,7 +4,9 @@
 * Fait Par : Etienne Belanger,Hugo Fontaine*
 * *
 *--------------------------------------------------- */-->
-
+<?php 
+echo $action->getCurrentPage()
+ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 		<head>
@@ -47,6 +49,14 @@
 									<li><a href="?home=true"> Accueil </a></li>
 									<li><a href="?gallery=true"> Gallerie </a></li>
 									<li><a href="?services=true"> Services </a></li>
+							<?php
+								}
+								if($action->getCurrentPage()=="http://localhost/admin.php?gallery=true")
+								{
+							?>
+									<li><a href="?ajoutImage=true"> Ajouter </a></li>
+									<li><a href="?suprimerImage=true"> Supprimer </a></li>
+									<li><a href="?modifierImage=true"> Modifier </a></li>
 							<?php
 								}
 							}
