@@ -13,7 +13,14 @@
 	$action->execute();
 
 	require_once("partial/header.php");
-	echo $action->data["CONTENT"];
+	echo $action->text["CONTENT"];
+	
+	foreach($action->data as $value)
+	{
+	echo $value["TITRE"];
+	echo $value["DESCRIPTION"];
+	
+	}
 ?>
 
 
