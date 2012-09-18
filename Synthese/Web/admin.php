@@ -36,12 +36,12 @@
 	<?php 
 	}
 	?>
-		<?php
-		if(isset($action->ajoutImage))
-		{
-		?>
-		<form action="admin.php" method="post">
-		<div>
+	<?php
+	if(isset($action->ajoutImage))
+	{
+	?>
+	<form action="admin.php" method="post">
+	<div>
 				<label for="titre">
 					Titre: 
 				</label>
@@ -63,11 +63,35 @@
 		<input type="submit" value="Add" />
 		</form>
 		
-		<?php 
-		}
-		?>
-	
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->suprimerImage))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["TITLE"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
 		
+				<label for="delete">
+					ID de l'image à supprimer(Number): 
+				</label>
+				<input type="text" name="deleteImg" id="deleteImg" />
+			</div>
+			
+		<input type="submit" value="Delete"/>
+	</form>
+		
+	<?php 
+	}
+	?>
+	
 	
 <?php
 	require_once("partial/footer.php");

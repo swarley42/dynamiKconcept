@@ -67,9 +67,12 @@
 			if(isset($_GET["suprimerImage"]))
 			{
 			$this->suprimerImage = true;
+			$data = ImageDAO::lireImage();
+			$this->data = $data;
 			}
 		
-		if (isset($_POST["titre"]) && isset($_POST["path"]) && isset($_POST["description"])) {
+			if (isset($_POST["titre"]) && isset($_POST["path"]) && isset($_POST["description"])) 
+			{
 				$data=null;
 				$id = 0;
 				$data = ImageDAO::getId();
@@ -78,8 +81,11 @@
 				ImageDAO::ajouterImage($id,$_POST["path"],$_POST["titre"],$_POST["description"]);
 				header("location:gallery.php");
 				exit;
-				}	
-			
+			}	
+			if(isset($_POST["deleteImg"]))
+			{
+			ImageDAO::supprimerImage($_POST["deleteImg"]);
+			}
 		}			
 	}
 	

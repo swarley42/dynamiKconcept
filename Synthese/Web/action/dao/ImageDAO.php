@@ -42,7 +42,7 @@
 		}
 	public static function supprimerImage($id){
 			$conn = Connection::getConnection();
-			$query = "DELETE FROM IMAGE WHERE NOM = :pId";
+			$query = "DELETE FROM IMAGE WHERE ID = :pId";
 			$statement = oci_parse($conn, $query);
 			
 			oci_bind_by_name($statement, ":pId", $id);
