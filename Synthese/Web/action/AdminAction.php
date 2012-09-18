@@ -62,6 +62,8 @@
 			if(isset($_GET["modifierImage"]))
 			{
 			$this->modifierImage = true;
+			$data = ImageDAO::lireImage();
+			$this->data = $data;
 				
 			}
 			if(isset($_GET["suprimerImage"]))
@@ -85,6 +87,10 @@
 			if(isset($_POST["deleteImg"]))
 			{
 			ImageDAO::supprimerImage($_POST["deleteImg"]);
+			}
+			if(isset($_POST["modID"]) && isset($_POST["pathMod"]) && isset($_POST["titreMod"]) && isset($_POST["descriptionMod"]))
+			{
+			ImageDAO::modifierImage($_POST["modID"],$_POST["pathMod"],$_POST["titreMod"],$_POST["descriptionMod"]);
 			}
 		}			
 	}

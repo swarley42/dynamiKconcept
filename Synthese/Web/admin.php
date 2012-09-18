@@ -78,6 +78,50 @@
 	<?php 
 	}
 	?>
+	<?php
+	if(isset($action->modifierImage))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["TITLE"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+	<div>	
+				<label for="modID">
+					ID de l'image à modifier: 
+				</label>
+				<input type="text" name="modID" id="modID" />
+			</div>
+	<div>
+				<label for="titre">
+					Titre: 
+				</label>
+				<input type="text" name="titreMod" id="titreMod" />
+			</div>
+		<div>
+				<label for="path">
+					Path:
+				</label>
+				<input type="text" name="pathMod" id="pathMod" />
+			</div>
+		<div>
+				<label for="description">
+					Description:
+				</label>
+				<input type="text" name="descriptionMod" id="descriptionMod" />
+			</div>
+			
+		<input type="submit" value="Modifier" />
+		</form>
+		
+	<?php 
+	}
+	?>
+	
 	
 	
 <?php

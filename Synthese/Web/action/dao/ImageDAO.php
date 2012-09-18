@@ -50,7 +50,7 @@
 		}
 	public static function modifierImage($id,$path,$titre,$desc){
 			$conn = Connection::getConnection();
-			$query = "UPDATE IMAGE SET PATH = :pPath AND SET DESCRIPTION = :pDesc AND SET TITLE = :pTitle WHERE ID = :pId";
+			$query = "UPDATE IMAGE SET PATH =:pPath, DESCRIPTION =:pDesc, TITLE =:pTitle WHERE ID =:pId";
 			$statement = oci_parse($conn, $query);
 			
 			oci_bind_by_name($statement, ":pId", $id);
