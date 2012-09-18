@@ -70,11 +70,13 @@
 			}
 		
 		if (isset($_POST["titre"]) && isset($_POST["path"]) && isset($_POST["description"])) {
-				$id =null;
-				$id = ImageDAO::getId();	
+				$data=null;
+				$id = 0;
+				$data = ImageDAO::getId();
+				$id = $data["MAX"]+1;	
 				
-				ImageDAO::ajouterImage($id,$_POST["titre"],$_POST["path"],$_POST["description"]);
-				header("location:admin.php");
+				ImageDAO::ajouterImage($id,$_POST["path"],$_POST["titre"],$_POST["description"]);
+				header("location:gallery.php");
 				exit;
 				}	
 			

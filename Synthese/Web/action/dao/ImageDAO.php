@@ -28,7 +28,7 @@
 	public static function ajouterImage($id,$path,$titre,$desc){
 			$result = null;
 			$conn = Connection::getConnection();
-			$query = "INSERT INTO IMAGE VALUES(:pId,:pPath,:pTitle,:pDesc)";
+			$query = "INSERT INTO IMAGE VALUES (:pId, :pPath, :pTitle, :pDesc )";
 			$statement = oci_parse($conn, $query);
 			
 			oci_bind_by_name($statement, ":pId", $id);
@@ -69,5 +69,6 @@
 			if ($row = oci_fetch_array($statement)) {
 				$result = $row;
 				}
+				return $result;
 			}
 }

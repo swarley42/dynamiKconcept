@@ -40,7 +40,7 @@
 		if(isset($action->ajoutImage))
 		{
 		?>
-		<form action="admins.php" method="post">
+		<form action="admin.php" method="post">
 		<div>
 				<label for="titre">
 					Titre: 
