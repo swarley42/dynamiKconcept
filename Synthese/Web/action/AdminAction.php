@@ -11,6 +11,8 @@
 	require_once("action/dao/UserDAO.php");
 	require_once("action/dao/ServiceDAO.php");
 	require_once("action/dao/ContentDAO.php");
+	require_once("action/dao/CareerDAO.php");
+	require_once("action/dao/ImageDAO.php");
 
 
 
@@ -21,9 +23,9 @@
 		public $contact;
 		public $gallery;
 		public $services;
-		public $ajout;
-		public $modifier;
-		public $suprimer;
+		public $ajoutImage;
+		public $modifierImage;
+		public $suprimerImage;
 		public $choix;
 	
 		public function __construct() {
@@ -51,25 +53,31 @@
 			{
 			$this->gallery = true;
 			}
-			if(isset($_GET["choix"]))
+			
+			if(isset($_GET["ajoutImage"]))
 			{
-			$selected_radio = $_POST["rImage"];
-				if($selected_radio === "ajouter")
-				{
-				$this->ajout = true;
-				}
-				if($selected_radio === "modifier")
-				{
-				$this->modifier = true;
-				
-				}
-				if($selected_radio === "suprimer")
-				{
-				$this->suprimer = true;
-				}
+			$this->ajoutImage = true;
+			
 			}
+			if(isset($_GET["modifierImage"]))
+			{
+			$this->modifierImage = true;
+				
+			}
+			if(isset($_GET["suprimerImage"]))
+			{
+			$this->suprimerImage = true;
+			}
+		
+		if (isset($_POST["titre"]) && isset($_POST["path"]) && isset($_POST["description"])) {
+				$id =null;
+				$id = ImageDAO::getId();	
+				
+				ImageDAO::ajouterImage($id,$_POST["titre"],$_POST["path"],$_POST["description"]);
+				header("location:admin.php");
+				exit;
+				}	
 			
-			
-					
-		}
+		}			
 	}
+	

@@ -26,48 +26,48 @@
 	<?php 
 	}
 	?>
-	<?php 
+	<?php
 	if(isset($action->gallery))
 	{
 	?>
-	<form action="?choix=true" method = "get">
-	<Input type = "radio" Name = "rImage" Value = "ajouter">Ajouter
-	<Input type = "radio" Name = "rImage" Value = "modifier">Modifier
-	<Input type = "radio" Name = "rImage" Value = "suprimer">Suprimer
-	<input type= "button" Name ="boutonImage" value="ChoixImage" />
-	</form>
+	<a href="?ajoutImage=true"> Ajouter </a>
+	<a href="?suprimerImage=true"> Delete </a>
+	<a href="?modifierImage=true"> Modifier </a>
 	<?php 
 	}
 	?>
-		<?php 
-		if(isset($action->ajout || $action->suprimer || $action->modifier))
+		<?php
+		if(isset($action->ajoutImage))
 		{
-			if(isset($action->ajout))
-			{
-			?>
+		?>
+		<form action="admins.php" method="post">
+		<div>
+				<label for="titre">
+					Titre: 
+				</label>
+				<input type="text" name="titre" id="titre" />
+			</div>
+		<div>
+				<label for="path">
+					Path:
+				</label>
+				<input type="text" name="path" id="path" />
+			</div>
+		<div>
+				<label for="description">
+					Description:
+				</label>
+				<input type="text" name="description" id="description" />
+			</div>
 			
-			<?php 
-			}
-			?>
-			<?php 
-			if(isset($action->suprimer))
-			{
-			?>
-			
-			<?php 
-			}
-			?>
-			<?php 
-			if(isset($action->modifier))
-			{
-			?>
-			
-			<?php 
-			}
-			?>
+		<input type="submit" value="Add" />
+		</form>
+		
 		<?php 
 		}
 		?>
+	
+		
 	
 <?php
 	require_once("partial/footer.php");

@@ -60,4 +60,14 @@
 			oci_execute($statement);
 		
 		}
+		public static function getId() {
+			$result = null;
+			$conn = Connection::getConnection();
+			$queryId = "SELECT MAX(ID) \"MAX\" FROM IMAGE";
+			$statement = oci_parse($conn, $queryId);
+			oci_execute($statement);
+			if ($row = oci_fetch_array($statement)) {
+				$result = $row;
+				}
+			}
 }
