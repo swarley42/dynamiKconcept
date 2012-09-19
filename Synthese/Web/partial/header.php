@@ -49,6 +49,9 @@
 									<li><a href="?home=true"> Accueil </a></li>
 									<li><a href="?gallery=true"> Gallerie </a></li>
 									<li><a href="?services=true"> Services </a></li>
+									<li><a href="?company=true">Compagnie</a></li>
+									<li><a href="?career=true">Carrières</a></li>
+									<li><a href="?contact=true">Contact</a></li>
 							<?php
 								}
 								if($action->getCurrentPage()=="http://localhost/admin.php?gallery=true")
@@ -57,6 +60,23 @@
 									<li><a href="?ajoutImage=true"> Ajouter </a></li>
 									<li><a href="?suprimerImage=true"> Supprimer </a></li>
 									<li><a href="?modifierImage=true"> Modifier </a></li>
+							<?php
+								}
+								
+								if($action->getCurrentPage()=="http://localhost/admin.php?services=true")
+								{
+							?>
+									<li><a href="?ajoutService=true"> Ajouter </a></li>
+									<li><a href="?suprimerService=true"> Supprimer </a></li>
+									<li><a href="?modifierService=true"> Modifier </a></li>
+							<?php
+								}
+								if($action->getCurrentPage()=="http://localhost/admin.php?career=true")
+								{
+							?>
+									<li><a href="?ajoutJob=true"> Ajouter </a></li>
+									<li><a href="?suprimerJob=true"> Supprimer </a></li>
+									<li><a href="?modifierJob=true"> Modifier </a></li>
 							<?php
 								}
 							}

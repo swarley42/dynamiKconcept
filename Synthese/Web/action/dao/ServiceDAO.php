@@ -42,7 +42,7 @@
 		}
 	public static function supprimerService($id){
 			$conn = Connection::getConnection();
-			$query = "DELETE FROM SERVICE WHERE NOM = :pId";
+			$query = "DELETE FROM SERVICE WHERE ID = :pId";
 			$statement = oci_parse($conn, $query);
 			
 			oci_bind_by_name($statement, ":pId", $id);
@@ -51,7 +51,7 @@
 	
 	public static function modifierService($id, $nom,$desc){
 			$conn = Connection::getConnection();
-			$query = "UPDATE SERVICE SET NAME = :pNom AND SET DESCRIPTION = :pValeur WHERE ID = :pId";
+			$query = "UPDATE SERVICE SET NAME = :pNom, DESCRIPTION = :pValeur WHERE ID = :pId";
 			$statement = oci_parse($conn, $query);
 			
 			oci_bind_by_name($statement, ":pId", $id);
@@ -60,7 +60,17 @@
 			oci_execute($statement);
 		
 		}
-	
+		public static function getId() {
+			$result = null;
+			$conn = Connection::getConnection();
+			$queryId = "SELECT MAX(ID) \"MAX\" FROM SERVICE";
+			$statement = oci_parse($conn, $queryId);
+			oci_execute($statement);
+			if ($row = oci_fetch_array($statement)) {
+				$result = $row;
+				}
+				return $result;
+			}
 	
 	
 	
