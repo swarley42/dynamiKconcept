@@ -17,6 +17,16 @@
 		}
 		
 		public function executeAction() {
+		if(isset($_POST["titreCon"]) && isset($_POST["comments"]))
+			{
+				
+			
+			ini_set('SMTP','cigogne.cvm.qc.ca');
+			ini_set('sendmail_from','sturm44@hotmail.com');
+			mail('ftheriault@cvm.qc.ca',$_POST['titreCon'],$_POST['comments']);
+			
+			}
+
 					
 		}
 	}
