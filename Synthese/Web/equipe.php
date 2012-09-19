@@ -7,15 +7,26 @@
 *--------------------------------------------------- */
 ?>
 <?php
-	require_once("action/CompanyAction.php");
+
+	require_once("action/EquipeAction.php");
 	
-	$action = new CompanyAction();
+	$action = new EquipeAction();
 	$action->execute();
 
 	require_once("partial/header.php");
-	echo $action->data["CONTENT"];
 ?>
-<li><a href="equipe.php">Information sur notre équipe!</a></li>
+	<?php 
+	foreach($action->data as $value)
+	{
+	?>
+	<h1><?php echo $value["NAME"]; ?></h1> <p><?php echo $value["DESCRIPTION"];?></p>
+	<?php
+	echo '<img src="'.$value['IMAGE'].'" />';
+	}
+	?>
+
+
+
 
 <?php
 	require_once("partial/footer.php");

@@ -13,6 +13,7 @@
 	require_once("action/dao/ContentDAO.php");
 	require_once("action/dao/CareerDAO.php");
 	require_once("action/dao/ImageDAO.php");
+	require_once("action/dao/EquipeDAO.php");
 
 
 
@@ -20,9 +21,10 @@
 		public $home;
 		public $career;
 		public $company;
-		public $contact;
 		public $gallery;
 		public $services;
+		public $equipe;
+		
 		public $ajoutImage;
 		public $modifierImage;
 		public $suprimerImage;
@@ -32,6 +34,9 @@
 		public $ajoutJob;
 		public $suprimerJob;
 		public $modifierJob;
+		public $ajoutEQ;
+		public $suprimerEQ;
+		public $modifierEQ;
 	
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_ADMINISTRATOR);
@@ -50,6 +55,11 @@
 			$this->home = true;
 			
 			}
+			if(isset($_GET["equipe"]))
+			{
+			$this->equipe = true;
+			
+			}
 			if(isset($_GET["services"]))
 			{
 			$this->services = true;
@@ -65,10 +75,6 @@
 			if(isset($_GET["company"]))
 			{
 			$this->company = true;
-			}
-			if(isset($_GET["contact"]))
-			{
-			$this->contact = true;
 			}
 			
 			if(isset($_GET["ajoutImage"]))
@@ -123,6 +129,24 @@
 			{
 			$this->suprimerJob = true;
 			$data = CareerDAO::lireJobs();
+			$this->data = $data;
+			}
+			if(isset($_GET["ajoutEQ"]))
+			{
+			$this->ajoutEQ = true;
+			
+			}
+			if(isset($_GET["modifierEQ"]))
+			{
+			$this->modifierEQ = true;
+			$data = EquipeDAO::lireEquipe();
+			$this->data = $data;
+				
+			}
+			if(isset($_GET["suprimerEQ"]))
+			{
+			$this->suprimerEQ = true;
+			$data = EquipeDAO::lireEquipe();
 			$this->data = $data;
 			}
 			
@@ -183,6 +207,25 @@
 			if(isset($_POST["JobID"]) && isset($_POST["JobMod"]) && isset($_POST["descriptionJobmod"]))
 			{
 			CareerDAO::modifierJob($_POST["JobID"],$_POST["JobMod"],$_POST["descriptionJobmod"]);
+			}
+			if (isset($_POST["titreEQ"]) && isset($_POST["pathEQ"]) && isset($_POST["descriptionEQ"])) 
+			{
+				$data=null;
+				$id = 0;
+				$data = EquipeDAO::getId();
+				$id = $data["MAX"]+1;	
+				
+				EquipeDAO::ajouterEquipe($id,$_POST["titreEQ"],$_POST["descriptionEQ"],$_POST["pathEQ"]);
+				header("location:equipe.php");
+				exit;
+			}	
+			if(isset($_POST["deleteEQ"]))
+			{
+			EquipeDAO::supprimerEquipe($_POST["deleteEQ"]);
+			}
+			if(isset($_POST["EQID"]) && isset($_POST["pathModEQ"]) && isset($_POST["titreModEQ"]) && isset($_POST["descriptionModEQ"]))
+			{
+			EquipeDAO::modifierEquipe($_POST["EQID"],$_POST["titreModEQ"],$_POST["descriptionModEQ"],$_POST["pathModEQ"]);
 			}
 		}			
 	}

@@ -51,7 +51,8 @@ echo $action->getCurrentPage()
 									<li><a href="?services=true"> Services </a></li>
 									<li><a href="?company=true">Compagnie</a></li>
 									<li><a href="?career=true">Carrières</a></li>
-									<li><a href="?contact=true">Contact</a></li>
+									<li><a href="?equipe=true">Equipe</a></li>
+									
 							<?php
 								}
 								if($action->getCurrentPage()=="http://localhost/admin.php?gallery=true")
@@ -77,6 +78,14 @@ echo $action->getCurrentPage()
 									<li><a href="?ajoutJob=true"> Ajouter </a></li>
 									<li><a href="?suprimerJob=true"> Supprimer </a></li>
 									<li><a href="?modifierJob=true"> Modifier </a></li>
+							<?php
+								}
+								if($action->getCurrentPage()=="http://localhost/admin.php?equipe=true")
+								{
+							?>
+									<li><a href="?ajoutEQ=true"> Ajouter </a></li>
+									<li><a href="?suprimerEQ=true"> Supprimer </a></li>
+									<li><a href="?modifierEQ=true"> Modifier </a></li>
 							<?php
 								}
 							}

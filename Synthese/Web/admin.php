@@ -23,6 +23,14 @@
 	<?php 
 	}
 	?>
+	<?php 
+	if(isset($action->company))
+	{
+	?>
+	
+	<?php 
+	}
+	?>
 	<?php
 	if(isset($action->ajoutImage))
 	{
@@ -285,6 +293,104 @@
 					Description du Poste:
 				</label>
 				<input type="text" name="descriptionJobmod" id="descriptionJobmod" />
+			</div>
+			
+		<input type="submit" value="Modifier" />
+		</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->ajoutEQ))
+	{
+	?>
+	<form action="admin.php" method="post">
+	<div>
+				<label for="titre">
+					Nom du membre de l'équipe: 
+				</label>
+				<input type="text" name="titreEQ" id="titreEQ" />
+			</div>
+		<div>
+				<label for="description">
+					Description:
+				</label>
+				<input type="text" name="descriptionEQ" id="descriptionEQ" />
+			</div>
+		<div>
+				<label for="path">
+					Path de l'image:
+				</label>
+				<input type="text" name="pathEQ" id="pathEQ" />
+			</div>
+			
+		<input type="submit" value="Add" />
+		</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->suprimerEQ))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["NAME"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+		
+				<label for="delete">
+					ID du membre à supprimer(Number): 
+				</label>
+				<input type="text" name="deleteEQ" id="deleteEQ" />
+			</div>
+			
+		<input type="submit" value="Delete"/>
+	</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->modifierEQ))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["NAME"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+	<div>	
+				<label for="EQID">
+					ID du membre à modifier: 
+				</label>
+				<input type="text" name="EQID" id="EQID" />
+			</div>
+	<div>
+				<label for="titre">
+					Nom du membre de l'équipe à modifier: 
+				</label>
+				<input type="text" name="titreModEQ" id="titreModEQ" />
+			</div>
+		<div>
+				<label for="path">
+					Path de l'image du membre à modifier:
+				</label>
+				<input type="text" name="pathModEQ" id="pathModEQ" />
+			</div>
+		<div>
+				<label for="description">
+					Description:
+				</label>
+				<input type="text" name="descriptionModEQ" id="descriptionModEQ" />
 			</div>
 			
 		<input type="submit" value="Modifier" />
