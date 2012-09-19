@@ -53,9 +53,12 @@
 			$this->data = $data;
 			
 			}
+
 			if(isset($_POST["editor1"])){
 			
 			ContentDAO::modifierPage("index",$_POST["editor1"]);
+			header("location:index.php");
+			exit;
 			
 			}
 			if(isset($_GET["services"]))
@@ -73,6 +76,16 @@
 			if(isset($_GET["company"]))
 			{
 			$this->company = true;
+			$data = null;	
+			$data = ContentDAO::lirePage("company");
+			$this->data = $data;
+			}
+			if(isset($_POST["editor2"])){
+			
+			ContentDAO::modifierPage("company",$_POST["editor2"]);
+			header("location:company.php");
+			exit;
+			
 			}
 			if(isset($_GET["contact"]))
 			{
