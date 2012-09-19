@@ -26,7 +26,12 @@
 		public $ajoutImage;
 		public $modifierImage;
 		public $suprimerImage;
-		public $choix;
+		public $ajoutService;
+		public $suprimerService;
+		public $modifierService;
+		public $ajoutJob;
+		public $suprimerJob;
+		public $modifierJob;
 	
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_ADMINISTRATOR);
@@ -53,6 +58,18 @@
 			{
 			$this->gallery = true;
 			}
+			if(isset($_GET["career"]))
+			{
+			$this->career = true;
+			}
+			if(isset($_GET["company"]))
+			{
+			$this->company = true;
+			}
+			if(isset($_GET["contact"]))
+			{
+			$this->contact = true;
+			}
 			
 			if(isset($_GET["ajoutImage"]))
 			{
@@ -72,7 +89,44 @@
 			$data = ImageDAO::lireImage();
 			$this->data = $data;
 			}
-		
+			if(isset($_GET["ajoutService"]))
+			{
+			$this->ajoutService = true;
+			
+			}
+			if(isset($_GET["modifierService"]))
+			{
+			$this->modifierService = true;
+			$data = ServiceDAO::lireService();
+			$this->data = $data;
+				
+			}
+			if(isset($_GET["suprimerService"]))
+			{
+			$this->suprimerService = true;
+			$data = ServiceDAO::lireService();
+			$this->data = $data;
+			}
+			if(isset($_GET["ajoutJob"]))
+			{
+			$this->ajoutJob = true;
+			
+			}
+			if(isset($_GET["modifierJob"]))
+			{
+			$this->modifierJob = true;
+			$data = CareerDAO::lireJobs();
+			$this->data = $data;
+				
+			}
+			if(isset($_GET["suprimerJob"]))
+			{
+			$this->suprimerJob = true;
+			$data = CareerDAO::lireJobs();
+			$this->data = $data;
+			}
+			
+			
 			if (isset($_POST["titre"]) && isset($_POST["path"]) && isset($_POST["description"])) 
 			{
 				$data=null;
@@ -91,6 +145,44 @@
 			if(isset($_POST["modID"]) && isset($_POST["pathMod"]) && isset($_POST["titreMod"]) && isset($_POST["descriptionMod"]))
 			{
 			ImageDAO::modifierImage($_POST["modID"],$_POST["pathMod"],$_POST["titreMod"],$_POST["descriptionMod"]);
+			}
+			if (isset($_POST["titreService"]) && isset($_POST["descriptionService"])) 
+			{
+				$data=null;
+				$id = 0;
+				$data = ServiceDAO::getId();
+				$id = $data["MAX"]+1;	
+				
+				ServiceDAO::ajouterService($id,$_POST["titreService"],$_POST["descriptionService"]);
+				header("location:services.php");
+				exit;
+			}	
+			if(isset($_POST["deleteSer"]))
+			{
+			ServiceDAO::supprimerService($_POST["deleteSer"]);
+			}
+			if(isset($_POST["SerID"]) && isset($_POST["ServiceMod"]) && isset($_POST["descriptionSer"]))
+			{
+			ServiceDAO::modifierService($_POST["SerID"],$_POST["ServiceMod"],$_POST["descriptionSer"]);
+			}
+			if (isset($_POST["titreJob"]) && isset($_POST["descriptionJob"])) 
+			{
+				$data=null;
+				$id = 0;
+				$data = CareerDAO::getId();
+				$id = $data["MAX"]+1;	
+				
+				CareerDAO::ajouterJob($id,$_POST["titreJob"],$_POST["descriptionJob"]);
+				header("location:career.php");
+				exit;
+			}	
+			if(isset($_POST["deleteJob"]))
+			{
+			CareerDAO::supprimerJob($_POST["deleteJob"]);
+			}
+			if(isset($_POST["JobID"]) && isset($_POST["JobMod"]) && isset($_POST["descriptionJobmod"]))
+			{
+			CareerDAO::modifierJob($_POST["JobID"],$_POST["JobMod"],$_POST["descriptionJobmod"]);
 			}
 		}			
 	}

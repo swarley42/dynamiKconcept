@@ -22,7 +22,7 @@
 					$text = null;
 					$data = null;
 					
-					$text = ContentDAO::lirePage("carreer");
+					$text = ContentDAO::lirePage("career");
 					$this->text = $text;
 					
 					$data = CareerDAO::lireJobs();

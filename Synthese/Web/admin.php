@@ -121,7 +121,178 @@
 	<?php 
 	}
 	?>
-	
+<?php
+	if(isset($action->ajoutService))
+	{
+	?>
+	<form action="admin.php" method="post">
+	<div>
+				<label for="titre">
+					Nom du Service: 
+				</label>
+				<input type="text" name="titreService" id="titreService" />
+			</div>
+		<div>
+				<label for="description">
+					Description du Service:
+				</label>
+				<input type="text" name="descriptionService" id="descriptionService" />
+			</div>
+			
+		<input type="submit" value="Add" />
+		</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->suprimerService))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["NAME"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+		
+				<label for="delete">
+					ID du Service à supprimer(Number): 
+				</label>
+				<input type="text" name="deleteSer" id="deleteSer" />
+			</div>
+			
+		<input type="submit" value="Delete"/>
+	</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->modifierService))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["NAME"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+	<div>	
+				<label for="ID">
+					ID du Service à modifier: 
+				</label>
+				<input type="text" name="SerID" id="modID" />
+			</div>
+	<div>
+				<label for="titre">
+					Changez le nom du Service: 
+				</label>
+				<input type="text" name="ServiceMod" id="ServiceMod" />
+			</div>
+		<div>
+				<label for="description">
+					Description:
+				</label>
+				<input type="text" name="descriptionSer" id="descriptionSer" />
+			</div>
+			
+		<input type="submit" value="Modifier" />
+		</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->ajoutJob))
+	{
+	?>
+	<form action="admin.php" method="post">
+	<div>
+				<label for="titre">
+					Titre du Poste: 
+				</label>
+				<input type="text" name="titreJob" id="titreJob" />
+			</div>
+		<div>
+				<label for="description">
+					Description du Poste:
+				</label>
+				<input type="text" name="descriptionJob" id="descriptionJob" />
+			</div>
+			
+		<input type="submit" value="Add" />
+		</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->suprimerJob))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["TITLE"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+		
+				<label for="delete">
+					ID du Poste à supprimer(Number): 
+				</label>
+				<input type="text" name="deleteJob" id="deleteJob" />
+			</div>
+			
+		<input type="submit" value="Delete"/>
+	</form>
+		
+	<?php 
+	}
+	?>
+	<?php
+	if(isset($action->modifierJob))
+	{
+		foreach($action->data as $value)
+			{
+			
+			echo $value["ID"];
+			echo $value["TITLE"];
+			
+			}
+	?>
+	<form action="admin.php" method="post">
+	<div>	
+				<label for="ID">
+					ID du Poste à modifier: 
+				</label>
+				<input type="text" name="JobID" id="modID" />
+			</div>
+	<div>
+				<label for="titre">
+					Changez le Titre du Poste: 
+				</label>
+				<input type="text" name="JobMod" id="JobMod" />
+			</div>
+		<div>
+				<label for="description">
+					Description du Poste:
+				</label>
+				<input type="text" name="descriptionJobmod" id="descriptionJobmod" />
+			</div>
+			
+		<input type="submit" value="Modifier" />
+		</form>
+		
+	<?php 
+	}
+	?>
 	
 	
 <?php
