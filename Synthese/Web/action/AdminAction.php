@@ -43,6 +43,14 @@
 			if(isset($_GET["home"]))
 			{
 			$this->home = true;
+			$data = null;	
+			$data = ContentDAO::lirePage("index");
+			$this->data = $data;
+			
+			}
+			if(isset($_POST["editor1"])){
+			
+			ContentDAO::modifierPage("index",$_POST["editor1"]);
 			
 			}
 			if(isset($_GET["services"]))

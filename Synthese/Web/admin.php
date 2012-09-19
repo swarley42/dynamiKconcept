@@ -18,8 +18,15 @@
 	<?php 
 	if(isset($action->home))
 	{
-	?>
-	<textarea id="editor1" name="editor1">&lt;p&gt;Initial value.&lt;/p&gt;</textarea>
+	?>	
+	<form action="admin.php" method="post">
+		<textarea id="editor1" name="editor1" rows="20" cols="100">&lt;p&gt;<?php echo $action->data["CONTENT"];?>&lt;/p&gt;</textarea>
+			<script type="text/javascript">
+				CKEDITOR.replace( 'editor1' );
+			</script>
+		<input type="submit" name="submit" id="submit"/>
+	</form>
+
 	<?php 
 	}
 	?>
@@ -70,7 +77,7 @@
 					ID de l'image à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteImg" id="deleteImg" />
-			</div>
+		
 			
 		<input type="submit" value="Delete"/>
 	</form>

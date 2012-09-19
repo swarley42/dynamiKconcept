@@ -16,7 +16,7 @@
 
 	foreach($action->data as $value)
 	{
-	echo '<img src="'.$value['PATH'].'" />';
+	echo '<img src="'.$value['PATH'].'" alt="La photo demandé n`est pas disponible" />';
 	}
 
 

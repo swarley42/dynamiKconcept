@@ -26,12 +26,12 @@
 		
 		}
 		
-		public static function modifierPage($page,$name,$content){
+		public static function modifierPage($page,$content){
 			$conn = Connection::getConnection();
-			$query = "UPDATE CONTENT SET NAME = :pNom AND SET CONTENT = :pValeur WHERE NAME = :pId";
+			$query = "UPDATE CONTENT SET CONTENT = :pValeur WHERE NAME = :pId";
 			$statement = oci_parse($conn, $query);
 			
-			oci_bind_by_name($statement, ":pNom", $name);
+			
 			oci_bind_by_name($statement, ":pId", $page);
 			oci_bind_by_name($statement, ":pValeur", $content);
 			oci_execute($statement);
