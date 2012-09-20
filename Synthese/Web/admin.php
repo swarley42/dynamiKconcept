@@ -191,8 +191,7 @@
 					ID du Service à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteSer" id="deleteSer" />
-			</div>
-			
+
 		<input type="submit" value="Delete"/>
 	</form>
 		
@@ -230,9 +229,10 @@
 					Description:
 				</label>
 				<input type="text" name="descriptionSer" id="descriptionSer" />
+				<input type="submit" value="Modifier" />
 			</div>
 			
-		<input type="submit" value="Modifier" />
+
 		</form>
 		
 	<?php 
@@ -281,8 +281,7 @@
 					ID du Poste à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteJob" id="deleteJob" />
-			</div>
-			
+
 		<input type="submit" value="Delete"/>
 	</form>
 		
@@ -377,9 +376,8 @@
 					ID du membre à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteEQ" id="deleteEQ" />
-			</div>
-			
-		<input type="submit" value="Delete"/>
+
+				<input type="submit" value="Delete"/>
 	</form>
 		
 	<?php 
