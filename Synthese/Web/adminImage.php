@@ -85,6 +85,7 @@
 	<?php
 			}
 	?>
+		</ul>
 	<form action="adminImage.php" method="post">
 	<div>	
 				<label for="modID">

@@ -51,6 +51,7 @@
 	<?php
 			}
 	?>
+		</ul>
 	<form action="adminService.php" method="post">
 		
 				<label for="delete">
@@ -78,6 +79,7 @@
 	<?php
 			}
 	?>
+		</ul>
 	<form action="adminService.php" method="post">
 	<div>	
 				<label for="ID">

@@ -8,7 +8,8 @@
 ?>
 <?php
 	require_once("action/CommonAction.php");
-	require_once("action/dao/ServiceDAO.php");
+	require_once("action/dao/CareerDAO.php");
+
 	
 	
 	class AdminActionJob extends CommonAction {

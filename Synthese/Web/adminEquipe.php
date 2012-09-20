@@ -57,6 +57,7 @@
 	<?php
 			}
 	?>
+		</ul>
 	<form action="adminEquipe.php" method="post">
 		
 				<label for="delete">
@@ -84,6 +85,7 @@
 	<?php
 			}
 	?>
+	</ul>
 	<form action="adminEquipe.php" method="post">
 	<div>	
 				<label for="EQID">

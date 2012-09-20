@@ -22,7 +22,7 @@
 	?>
 	<h2><?php echo $value["NAME"]; ?></h2> <p><?php echo $value["DESCRIPTION"];?></p>
 	<?php
-	echo '<img src="'.$value['IMAGE'].'" />';
+	echo '<img src="'.$value['IMAGE'].'" alt="La photo demandé n`est pas disponible" />';
 	}
 	?>
 

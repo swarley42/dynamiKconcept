@@ -15,7 +15,7 @@
 	require_once("partial/header.php");
 	echo $action->data["CONTENT"];
 ?>
-<li><a href="equipe.php">Information sur notre équipe!</a></li>
+<a href="equipe.php">Information sur notre équipe!</a>
 <?php
 		//Lien #2 pour le easter
 		if(!isset($_SESSION["easter2"]) && $_SESSION["easter1"]==true)

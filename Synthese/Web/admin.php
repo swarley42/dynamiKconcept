@@ -20,7 +20,7 @@
 	{
 	?>	
 	<form action="admin.php" method="post">
-		<textarea id="editor1" name="editor1" rows="20" cols="100">&lt;p&gt;<?php echo $action->data["CONTENT"];?>&lt;/p&gt;</textarea>
+		<textarea id="editor1" name="editor1" rows="20" cols="100"><?php echo $action->data["CONTENT"];?></textarea>
 			<script type="text/javascript">
 				CKEDITOR.replace( 'editor1' );
 			</script>
@@ -35,7 +35,7 @@
 	{
 	?>	
 	<form action="admin.php" method="post">
-		<textarea id="editor2" name="editor2" rows="20" cols="100">&lt;p&gt;<?php echo $action->data["CONTENT"];?>&lt;/p&gt;</textarea>
+		<textarea id="editor2" name="editor2" rows="20" cols="100"><?php echo $action->data["CONTENT"];?></textarea>
 			<script type="text/javascript">
 				CKEDITOR.replace( 'editor2' );
 			</script>
