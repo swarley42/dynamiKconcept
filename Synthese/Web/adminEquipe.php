@@ -63,7 +63,7 @@
 					ID du membre à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteEQ" id="deleteEQ" />
-			</div>
+
 			
 		<input type="submit" value="Delete"/>
 	</form>

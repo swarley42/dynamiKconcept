@@ -57,7 +57,7 @@
 					ID du Poste à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteJob" id="deleteJob" />
-			</div>
+
 			
 		<input type="submit" value="Delete"/>
 	</form>

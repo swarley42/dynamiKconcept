@@ -57,7 +57,7 @@
 					ID du Service à supprimer(Number): 
 				</label>
 				<input type="text" name="deleteSer" id="deleteSer" />
-			</div>
+
 			
 		<input type="submit" value="Delete"/>
 	</form>
