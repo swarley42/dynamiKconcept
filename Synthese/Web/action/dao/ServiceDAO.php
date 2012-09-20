@@ -60,6 +60,7 @@
 			oci_execute($statement);
 		
 		}
+		// retourne le dernier id (imite la séquence dans la bd)
 		public static function getId() {
 			$result = null;
 			$conn = Connection::getConnection();

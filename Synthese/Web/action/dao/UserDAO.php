@@ -33,7 +33,7 @@
 			
 			return $result;
 		}
-		
+		// retourne le dernier id (imite la séquence dans la bd)
 		public static function getId() {
 			$result = null;
 			$conn = Connection::getConnection();
@@ -51,10 +51,7 @@
 			
 			$query = "INSERT INTO USERS VALUES (:pId, :pUsername, :pPassword, :pName, :pV)";
 			$statement = oci_parse($conn, $query);
-			
-			
-			
-			
+
 			oci_bind_by_name($statement, ":pUsername", $username);
 			oci_bind_by_name($statement, ":pPassword", $pass);
 			oci_bind_by_name($statement, ":pName", $name);

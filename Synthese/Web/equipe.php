@@ -16,6 +16,7 @@
 	require_once("partial/header.php");
 ?>
 	<?php 
+	// Boucle d'affichage du contenu dans pour les équipes
 	foreach($action->data as $value)
 	{
 	?>
@@ -26,6 +27,7 @@
 	?>
 
 		<?php
+		// Lien #3 pour le easter
 		if(!isset($_SESSION["easter3"]) && $_SESSION["easter2"]==true)
 		{
 		?>

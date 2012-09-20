@@ -43,19 +43,20 @@
 								<li><a href="admin.php">Administrateur</a></li>
 							<?php
 								}
+								
 								if($action->getCurrentPage()=="http://localhost/admin.php")
 								{
 							?>
 									<li><a href="?home=true"> Accueil </a></li>
-									<li><a href="?gallery=true"> Gallerie </a></li>
-									<li><a href="?services=true"> Services </a></li>
+									<li><a href="adminImage.php"> Gallerie </a></li>
+									<li><a href="adminService.php"> Services </a></li>
 									<li><a href="?company=true">Compagnie</a></li>
-									<li><a href="?career=true">Carrières</a></li>
-									<li><a href="?equipe=true">Equipe</a></li>
+									<li><a href="adminJob.php">Carrières</a></li>
+									<li><a href="adminEquipe.php">Equipe</a></li>
 									
 							<?php
 								}
-								if($action->getCurrentPage()=="http://localhost/admin.php?gallery=true")
+								if($action->getCurrentPage()=="http://localhost/adminImage.php")
 								{
 							?>
 									<li><a href="?ajoutImage=true"> Ajouter </a></li>
@@ -64,7 +65,7 @@
 							<?php
 								}
 								
-								if($action->getCurrentPage()=="http://localhost/admin.php?services=true")
+								if($action->getCurrentPage()=="http://localhost/adminService.php")
 								{
 							?>
 									<li><a href="?ajoutService=true"> Ajouter </a></li>
@@ -72,7 +73,7 @@
 									<li><a href="?modifierService=true"> Modifier </a></li>
 							<?php
 								}
-								if($action->getCurrentPage()=="http://localhost/admin.php?career=true")
+								if($action->getCurrentPage()=="http://localhost/adminJob.php")
 								{
 							?>
 									<li><a href="?ajoutJob=true"> Ajouter </a></li>
@@ -80,7 +81,7 @@
 									<li><a href="?modifierJob=true"> Modifier </a></li>
 							<?php
 								}
-								if($action->getCurrentPage()=="http://localhost/admin.php?equipe=true")
+								if($action->getCurrentPage()=="http://localhost/adminEquipe.php")
 								{
 							?>
 									<li><a href="?ajoutEQ=true"> Ajouter </a></li>

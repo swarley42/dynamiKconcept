@@ -36,6 +36,7 @@
 		
 		
 		<?php
+		// Lien #1 pour le easter
 		if(!isset($_SESSION["easter1"]))
 		{
 		?>

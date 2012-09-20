@@ -13,12 +13,13 @@
 	$action->execute();
 
 	require_once("partial/header.php");
-
+	// Boucle d'affichage pour les images dans la gallery
 	foreach($action->data as $value)
 	{
 	echo '<img src="'.$value['PATH'].'" alt="La photo demandé n`est pas disponible" />';
 	}
-	
+		//Si l'utilisateur a trouvé les 5 liens dans le bon ordre,l'image easter apparait
+		//S'il la clique, le easter se reset
 		if($_SESSION["easter5"])
 		{
 		?>
