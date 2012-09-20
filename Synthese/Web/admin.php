@@ -78,14 +78,17 @@
 	<?php
 	if(isset($action->suprimerImage))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["TITLE"];
-			
+	?>
+			<li>ID:<?php echo $value["ID"]; ?>    Nom:<?php echo $value["TITLE"]; ?></li>
+	<?php
 			}
 	?>
+		</ul>
 	<form action="admin.php" method="post">
 		
 				<label for="delete">
@@ -103,12 +106,14 @@
 	<?php
 	if(isset($action->modifierImage))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["TITLE"];
-			
+	?>
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["TITLE"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">
@@ -170,12 +175,14 @@
 	<?php
 	if(isset($action->suprimerService))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["NAME"];
-			
+	?>	
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["NAME"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">
@@ -195,12 +202,14 @@
 	<?php
 	if(isset($action->modifierService))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["NAME"];
-			
+	?>	
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["NAME"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">
@@ -256,12 +265,14 @@
 	<?php
 	if(isset($action->suprimerJob))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["TITLE"];
-			
+	?>	
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["TITLE"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">
@@ -281,12 +292,14 @@
 	<?php
 	if(isset($action->modifierJob))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["TITLE"];
-			
+	?>	
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["TITLE"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">
@@ -348,12 +361,14 @@
 	<?php
 	if(isset($action->suprimerEQ))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["NAME"];
-			
+	?>	
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["NAME"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">
@@ -373,12 +388,14 @@
 	<?php
 	if(isset($action->modifierEQ))
 	{
+	?>
+		<ul>
+	<?php
 		foreach($action->data as $value)
 			{
-			
-			echo $value["ID"];
-			echo $value["NAME"];
-			
+	?>	
+			<li>ID: <?php echo $value["ID"];?> Nom: <?php echo $value["NAME"];?></li>
+	<?php
 			}
 	?>
 	<form action="admin.php" method="post">

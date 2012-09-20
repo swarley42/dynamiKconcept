@@ -19,12 +19,10 @@
 	foreach($action->data as $value)
 	{
 	?>
-	<h1><?php echo $value["TITLE"]; ?></h1> <p><?php echo $value["DESCRIPTION"];?></p>
+	<h2><?php echo $value["TITLE"]; ?></h2> <p><?php echo $value["DESCRIPTION"];?></p>
 	<?php
 	}
 	?>
-
-
 
 <?php
 	require_once("partial/footer.php");
