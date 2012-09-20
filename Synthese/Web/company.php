@@ -17,6 +17,7 @@
 ?>
 <li><a href="equipe.php">Information sur notre équipe!</a></li>
 <?php
+		//Lien #2 pour le easter
 		if(!isset($_SESSION["easter2"]) && $_SESSION["easter1"]==true)
 		{
 		?>

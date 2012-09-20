@@ -32,7 +32,7 @@
 				session_destroy();
 				session_start();
 			}
-			
+			//Condition pour les liens Easter
 			if(isset($_GET["easter1"]))
 			{
 			$_SESSION["easter1"] = true;
@@ -53,6 +53,7 @@
 			{
 			$_SESSION["easter5"] = true;
 			}
+			// reset du easter
 			if(isset($_GET["reset"]))
 			{
 			$_SESSION["easter1"] = null;

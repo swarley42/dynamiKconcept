@@ -20,6 +20,8 @@
 
  
 		<?php
+		
+		//Lien #4 pour le easter
 		if(!isset($_SESSION["easter4"]) && $_SESSION["easter3"]==true)
 		{
 		?>

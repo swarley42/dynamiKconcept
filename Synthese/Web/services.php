@@ -16,6 +16,7 @@
 	require_once("partial/header.php");
 ?>
 	<?php 
+	// Boucle d'affichage pour les services offerts
 	foreach($action->data as $value)
 	{
 	?>

@@ -16,6 +16,7 @@
 	echo $action->text["CONTENT"];
 	?>
 	<?php 
+	// Boucle d'affichage du contenu des postes disponibles
 	foreach($action->data as $value)
 	{
 	?>
