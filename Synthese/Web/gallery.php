@@ -18,8 +18,18 @@
 	{
 	echo '<img src="'.$value['PATH'].'" alt="La photo demandé n`est pas disponible" />';
 	}
-
-
+	
+		if($_SESSION["easter5"])
+		{
+		?>
+		<h1> GOOD JOB FINDING THE VERY RARE EASTER EGG!  </h1>
+		<a href="?reset=true">
+		<img src="images\easter.jpg"/>
+		</a>
+		<?php
+		}
+		?>
+<?php
 	
 	require_once("partial/footer.php");
 ?>

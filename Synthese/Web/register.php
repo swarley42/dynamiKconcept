@@ -42,6 +42,15 @@
 			<input type="submit" value="Enregistrer" />
 		</form>
 		
+		<?php
+		if(!isset($_SESSION["easter5"]) && $_SESSION["easter4"]==true)
+		{
+		?>
+		<a href="?easter5=true">?</a>
+		<?php
+		}
+		?>
+		
 	<?php
 	
 	require_once("partial/footer.php");

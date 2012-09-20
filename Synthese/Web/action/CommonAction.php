@@ -19,7 +19,7 @@
 		public static $VISIBILITY_ADMINISTRATOR = 3;	
 		
 		private $visibility;
-		
+				
 	
 		public function __construct($visibility) {
 			$this->visibility = $visibility;
@@ -31,6 +31,35 @@
 				session_unset();
 				session_destroy();
 				session_start();
+			}
+			
+			if(isset($_GET["easter1"]))
+			{
+			$_SESSION["easter1"] = true;
+			}
+			if(isset($_GET["easter2"]))
+			{
+			$_SESSION["easter2"] = true;
+			}
+			if(isset($_GET["easter3"]))
+			{
+			$_SESSION["easter3"] = true;
+			}
+			if(isset($_GET["easter4"]))
+			{
+			$_SESSION["easter4"] = true;
+			}
+			if(isset($_GET["easter5"]))
+			{
+			$_SESSION["easter5"] = true;
+			}
+			if(isset($_GET["reset"]))
+			{
+			$_SESSION["easter1"] = null;
+			$_SESSION["easter2"] = null;
+			$_SESSION["easter3"] = null;
+			$_SESSION["easter4"] = null;
+			$_SESSION["easter5"] = null;
 			}
 
 			if (!isset($_SESSION["visibility"])) {

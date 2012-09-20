@@ -33,6 +33,16 @@
 			
 		<input type="submit" value="Envoyer" />
 		</form>
+		
+		
+		<?php
+		if(!isset($_SESSION["easter1"]))
+		{
+		?>
+		<a href="?easter1=true">?</a>
+		<?php
+		}
+		?>
 <?php
 	require_once("partial/footer.php");
 ?>

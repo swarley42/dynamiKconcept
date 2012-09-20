@@ -16,7 +16,14 @@
 	echo $action->data["CONTENT"];
 ?>
 <li><a href="equipe.php">Information sur notre équipe!</a></li>
-
+<?php
+		if(!isset($_SESSION["easter2"]) && $_SESSION["easter1"]==true)
+		{
+		?>
+		<a href="?easter2=true">?</a>
+		<?php
+		}
+		?>
 <?php
 	require_once("partial/footer.php");
 ?>

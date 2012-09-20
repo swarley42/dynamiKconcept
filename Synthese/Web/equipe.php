@@ -25,7 +25,14 @@
 	}
 	?>
 
-
+		<?php
+		if(!isset($_SESSION["easter3"]) && $_SESSION["easter2"]==true)
+		{
+		?>
+		<a href="?easter3=true">?</a>
+		<?php
+		}
+		?>
 
 
 <?php
