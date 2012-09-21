@@ -45,10 +45,15 @@
 		
 		<?php
 		//Lien #5 pour le easter
-		if(!isset($_SESSION["easter5"]) && $_SESSION["easter4"]==true)
+		if(!isset($_SESSION["easter5"]) && isset($_SESSION["easter4"]))
 		{
+		if($_SESSION["easter4"]==true)
+			{
 		?>
 		<a href="?easter5=true">?</a>
+			<?php
+			}
+			?>
 		<?php
 		}
 		?>

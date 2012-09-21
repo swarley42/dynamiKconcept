@@ -28,10 +28,15 @@
 
 		<?php
 		// Lien #3 pour le easter
-		if(!isset($_SESSION["easter3"]) && $_SESSION["easter2"]==true)
+		if(!isset($_SESSION["easter3"]) && isset($_SESSION["easter2"]))
 		{
-		?>
+		if($_SESSION["easter2"]==true)
+			{
+			?>
 		<a href="?easter3=true">?</a>
+			<?php
+			}
+			?>
 		<?php
 		}
 		?>
